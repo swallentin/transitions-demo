@@ -1,0 +1,74 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+body {
+  background-color: #eee;
+  margin-top: 30px;
+}
+.page-transition-demo {
+  background-color: #fff;
+}
+.page-transition-demo .active > a,
+.page-transition-demo .active > a:hover {
+  background-color: #0088cc;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  line-height: 1;
+}
+.content {
+  margin: 20px;
+}
+.panel {
+  margin-top: -60px;
+  position: absolute;
+  background: #000;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 0;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #ffffff));
+  background: -ms-linear-gradient(bottom, #eeeeee, #ffffff);
+  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 100%);
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.panel:target {
+  opacity: 1;
+  margin-top: 10px;
+  background-color: #ffcb00;
+  z-index: 3;
+}

@@ -1,0 +1,54 @@
+@import "elements.less";
+
+body {
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+.content {
+  // position: absolute;
+}
+
+.page-transition-demo {
+  background-color: #fff;
+}
+
+.page-transition-demo .active > a,
+.page-transition-demo .active > a:hover  {
+  background-color: #0088cc;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  // overflow: hidden;
+  line-height: 1;
+}
+.content {
+  margin: 20px;
+}
+
+.panel {
+  margin-top: -60px;
+  position: absolute;
+  background: #000;
+  box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+  z-index: 2;
+  opacity: 0;
+  .gradient(#FFF, #EEE, #FFF);
+  .transition(.8s, ease-in-out);
+  .drop-shadow(0px, 0px, 20px, 000);
+  .border-radius(10px, 10px, 10px, 10px);
+}
+
+.panel:target {
+    opacity: 1;
+    margin-top: 10px;
+    background-color: #ffcb00;
+    z-index: 3;
+}
